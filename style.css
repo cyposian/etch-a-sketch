@@ -47,20 +47,70 @@ table {
 }
 
 
-html {
+
+
+body {
 	background-color: #0B0C10;
 }
 
 .header {
 	color: #66fcf1;
-	font-size: 3em;
+	font-size: 4.5em;
 	text-align: center;
 	margin-top: 1em;
 }
 
 
 
+.grid {
+	display: grid;
+	width: 700px;
+	height: 700px;
+	border: 3px solid #1F2833;
 
-.sizeValue {
-	color: #C5C6C7;
 }
+
+
+
+
+
+.main {
+	color: #C5C6C7;
+	margin: 50px 100px 50px 100px;
+	display: flex;
+	justify-content: center;
+	column-gap: 100px;
+	
+}
+
+.settings {
+	display: grid;
+	align-items: center;
+	padding: 20px;
+	border: 3px solid #1F2833;
+	
+}
+
+input[type="color"] {
+	padding: 9px 15px;
+	color: #45A29E;
+	background-color: #66fcf1;
+	border: 2px solid #45A29E;
+	appearance: none;
+	outline: none;
+}
+
+button {
+	padding: 9px 15px;
+	color: #45A29E;
+	background-color: #0B0C10;
+	border: 2px solid #45A29E;
+}
+
+
+
+
+
+
+
+
