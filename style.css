@@ -45,3 +45,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+html {
+	background-color: #0B0C10;
+}
+
+.header {
+	color: #66fcf1;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 1em;
+}
+
+
+
+
+.sizeValue {
+	color: #C5C6C7;
+}
