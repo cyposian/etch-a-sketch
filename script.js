@@ -6,11 +6,59 @@ let currentSize = DEFAULT_SIZE
 let currentMode = DEFAULT_MODE
 let currentColor = DEFAULT_COLOR
 
+function setSize(newSize) {
+	currentSize = newSize
+}
+
+function setMode(newMode) {
+	activateButton(newMode)
+	currentMode = newMode
+}
+
+function setColor(newColor) {
+	currentColor = newColor
+}
+
+const colorPicker = document.getElementById("colorPicker") 
+const colorBtn = document.getElementById("colorBtn")
+const rainbowBtn = document.getElementById("rainbowBtn")
+const eraserBtn = document.getElementById("eraserBtn")
+const clearBtn = document.getElementById("clearBtn")
+const sizeValue = document.getElementById("sizeValue")
+const sizeSlider = document.getElementById("sizeSlider") 
 const grid = document.getElementById("grid")
+
+colorPicker.oninput = (e) => setColor(e.target.value)
+colorBtn.onclick = () => setMode('color')
+rainbowBtn.onclick = () => setMode('rainbow')
+eraserBtn.onclick = () => setMode('eraser')
+clearBtn.onclick = () => resetGrid()
+sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value)
+sizeSlider.onchange = (e) => changeSize(e.target.value)
+
 
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
+
+function updateSizeValue(val) {
+	sizeValue.innerHTML = `${val} x ${val}`
+}
+
+function changeSize(val) {
+	setSize(val)
+	updateSizeValue(val)
+	resetGrid()
+}
+
+function resetGrid() {
+	clearGrid()
+	setupGrid(currentSize)
+}
+
+function clearGrid() {
+	grid.innerHTML = ''
+}
 
 function setupGrid(size) {
 	grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -40,7 +88,21 @@ function changeColor(e) {
 	}
 }
 
+function activateButton(newMode) {
+	rainbowBtn.classList.remove('active')
+	colorBtn.classList.remove('active')
+	eraserBtn.classList.remove('active')
+
+	if(newMode === 'rainbow') {
+		rainbowBtn.classList.add('active')
+	} else if(newMode === 'color') {
+		colorBtn.classList.add('active')
+	} else if(newMode === 'eraser') {
+		eraserBtn.classList.add('active')
+	}
+}
+
 window.onload = () => {
 	setupGrid(DEFAULT_SIZE)
-	// activateButton(DEFAULT_MODE)
+	activateButton(DEFAULT_MODE)
 }
