@@ -138,3 +138,7 @@ button.active {
 	display: flex;
 	justify-content: center;
 }
+
+input[type="range"] {
+	cursor: pointer;
+}
