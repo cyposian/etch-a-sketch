@@ -130,7 +130,7 @@ button {
 }
 
 button.active {
-	color: #0B0C10;
+	color: var(--primary-dark);
 	background-color: var(--primary-teal);
 }
 
