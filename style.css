@@ -97,6 +97,22 @@ body {
 	/* border: 3px solid #1F2833; */
 }
 
+button,
+input[type="color"] {
+	transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+input[type="color"]:hover {
+	transform: scale(1.05);
+}
+
+button:active,
+input[type="color"]:active {
+	transition: transform 0.05s ease-in-out;
+	transform: scale(1);
+}
+
 input[type="color"] {
 	display: flex;
 	background-color: inherit;
