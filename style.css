@@ -45,6 +45,7 @@ table {
 	border-spacing: 0;
 }
 
+
 :root {
 	--primary-teal: #66fcf1;
 	--secondary-teal: #45A29E;
@@ -134,7 +135,6 @@ input[type="color"] {
 	padding: 0;
 }
 
-
 button {
 	padding: 9px 15px;
 	color: var(--primary-teal);
@@ -162,5 +162,22 @@ button.active {
 
 input[type="range"] {
 	cursor: pointer;
+	-webkit-appearance: none;
+	background-color: var(--primary-teal);
+}
 
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 10px;
+	border: 1px solid var(--primary-dark);
+	border-radius: 25px;
+	background: var(--secondary-teal);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 24px;
+	height: 24px;
+	border-radius: 25px;
+	margin-top: -8px;
+	background: var(--primary-teal);
 }
