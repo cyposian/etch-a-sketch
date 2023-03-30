@@ -46,14 +46,13 @@ table {
 }
 
 
-
-
 body {
 	background-color: #0B0C10;
 }
 
 .header {
 	color: #66fcf1;
+	font-family: 'Alkatra';
 	font-size: 4.5em;
 	text-align: center;
 	margin-top: 1em;
@@ -70,7 +69,7 @@ body {
 
 .grid-element {
 	border: 1px solid #1F2833;
-
+	
 }
 
 
@@ -121,6 +120,7 @@ button {
 	background-color: #0B0C10;
 	border: 2px solid #45A29E;
 	border-radius: 5px;
+	font-family: 'Ubuntu';
 }
 
 button.active {
@@ -130,6 +130,7 @@ button.active {
 
 
 .sizeValue {
+	font-family: 'Ubuntu';
 	color: #66fcf1;
 	display: flex;
 	justify-content: center;
