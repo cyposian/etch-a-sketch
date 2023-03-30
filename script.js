@@ -26,6 +26,7 @@ function setupGrid(size) {
 }
 
 function changeColor(e) {
+	e.preventDefault()
 	if (e.type === 'mouseover' && !mouseDown) return
 	if (currentMode === 'color') {
 		e.target.style.backgroundColor = currentColor
