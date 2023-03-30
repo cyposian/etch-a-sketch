@@ -78,12 +78,11 @@ body {
 
 
 .main {
-	color: #C5C6C7;
-	/* margin: 25px 360px 25px 50px; */
-	margin: 25px 50px;
 	display: flex;
-	justify-content: center;
-	column-gap: 100px;
+	justify-content: flex-start;
+	max-width: 1275px;
+	gap: 100px;
+	margin: 25px auto;
 }
 
 .settings {
