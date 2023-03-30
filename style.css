@@ -2,19 +2,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,25 +90,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -76,36 +163,43 @@ body {
 
 .main {
 	color: #C5C6C7;
-	margin: 50px 100px 50px 100px;
+	/* margin: 25px 360px 25px 50px; */
+	margin: 25px 50px;
 	display: flex;
 	justify-content: center;
 	column-gap: 100px;
-	
 }
 
 .settings {
-	display: grid;
-	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	padding: 20px;
-	border: 3px solid #1F2833;
-	
+	padding-bottom: 100px;
+	gap: 30px;
+	/* border: 3px solid #1F2833; */
 }
 
 input[type="color"] {
-	border: none;
+	display: flex;
 	background-color: inherit;
 	cursor: pointer;
-	width: 80px; 
+	border: none;
+	width: 80px;
 	height: 80px;
 	border-radius: 50px;
+	margin: 0px auto;
 }
 
 /* removes default styling from input color element */
-input[type='color']::-webkit-color-swatch {
+::-webkit-color-swatch {
 	border: none;
 	border-radius: 50px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+}
+
+::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
 
 
 button {
@@ -116,10 +210,15 @@ button {
 	border-radius: 5px;
 }
 
+button.active {
+	color: #0B0C10;
+	background-color: #45A29E;
+}
 
 
 
-
-
-
-
+.sizeValue {
+	color: #45A29E;
+	display: flex;
+	justify-content: center;
+}
