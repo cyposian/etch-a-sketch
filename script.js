@@ -74,7 +74,7 @@ function setupGrid(size) {
 }
 
 function changeColor(e) {
-	e.preventDefault()
+	// e.preventDefault() //don't need since disabled user-select in css
 	if (e.type === 'mouseover' && !mouseDown) return
 	if (currentMode === 'color') {
 		e.target.style.backgroundColor = currentColor

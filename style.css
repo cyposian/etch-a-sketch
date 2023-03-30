@@ -181,3 +181,7 @@ input[type="range"]::-webkit-slider-thumb {
 	margin-top: -8px;
 	background: var(--primary-teal);
 }
+
+.grid-element {
+	user-select: none;
+}
