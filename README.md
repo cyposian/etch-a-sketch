@@ -1,5 +1,5 @@
 # Etch-A-Sketch
-Draw pixel art by waving your mouse while holding down click.
+Draw pixel art with your mouse.
 
 ## Features
 - Single color
