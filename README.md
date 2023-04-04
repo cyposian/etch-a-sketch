@@ -1,7 +1,7 @@
 # Etch-A-Sketch
 Draw pixel art with your mouse.
 
-[Live Demo]: (https://cyposian.github.io/etch-a-sketch/)
+[Live Demo](https://cyposian.github.io/etch-a-sketch/)
 
 ## Features
 - Single color
